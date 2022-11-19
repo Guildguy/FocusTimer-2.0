@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --btn-PrimaryBg: #576468;   
+    --btn-SecondaryBg: #4a2222;
+    --btn-PrimaryIcon:  #323238;
+    --bg-color: hsl(0, 100%, 45%);
+}
+
+body {
+    max-height: 200px;
+    background-color: #323238;  
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 921px;
+    margin: 15% auto;
+}
+
+.timer {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 126.166px;
+    line-height: 148px;
+
+    text-transform: uppercase;
+
+    color: hsl(0, 100%, 45%);
+    display: flex;
+
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.controls {
+    text-align: center;
+    display: flex;
+    gap: 40px;
+}
+
+.soundCards {
+    display: grid;
+
+    grid-template-areas:
+    "A B"
+    "C D";
+
+    gap: 32px;
+}
+
+button {
+    align-items: center;
+    background: transparent;
+    cursor: pointer;
+}
+
+.btnPlay,
+.btnPause,
+.btnStop,
+.btnMore,
+.btnLess {
+    width: 30px;
+    margin-left: 15px;
+}
+
+.bg {
+    fill: var(--btn-PrimaryBg);
+}
+
+.icon {
+    fill: var(--btn-PrimaryIcon);
+}
+
+.sColor .bg {
+    fill: var(--btn-SecondaryBg)
+}
+
+.sColor .icon {
+    fill: var(--bg-color);
+}
+
+.hide {
+    display: none;
+    visibility: hidden;
+}
+
+/*color before press the btn
+btn bg = #E1E1E6
+btn icon = #323238
+
+color after press the bnt
+btn bg = #02799D
+btn icon = white
+
+hsl(0, 100%, 45%)*/
