@@ -6,15 +6,13 @@
 }
 
 :root {
-    --btn-PrimaryBg: #576468;   
-    --btn-SecondaryBg: #4a2222;
-    --btn-PrimaryIcon:  #323238;
-    --bg-color: hsl(0, 100%, 45%);
+    --btn-Lightcolor: #E1E1E6;
+    --btn-DarkColor:  #323238;
+    font-size: 62.5%;
 }
 
 body {
-    max-height: 200px;
-    background-color: #323238;  
+    max-height: 150px;
 }
 
 main {
@@ -22,19 +20,19 @@ main {
     justify-content: space-between;
     align-items: center;
     
-    width: 921px;
+    max-width: 921px;
     margin: 15% auto;
 }
 
 .timer {
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
-    font-size: 126.166px;
-    line-height: 148px;
+    font-size: 12.7rem;
+    line-height: 14.8rem;
 
     text-transform: uppercase;
 
-    color: hsl(0, 100%, 45%);
+    color: var(--btn-DarkColor);
     display: flex;
 
     margin-bottom: 50px;
@@ -44,7 +42,7 @@ main {
 .controls {
     text-align: center;
     display: flex;
-    gap: 40px;
+    gap: 4.0rem;
 }
 
 .soundCards {
@@ -54,7 +52,7 @@ main {
     "A B"
     "C D";
 
-    gap: 32px;
+    gap: 3.2rem;
 }
 
 button {
@@ -69,23 +67,23 @@ button {
 .btnMore,
 .btnLess {
     width: 30px;
-    margin-left: 15px;
+    margin-left: 10px;
 }
 
 .bg {
-    fill: var(--btn-PrimaryBg);
+    fill: var(--btn-Lightcolor);
 }
 
 .icon {
-    fill: var(--btn-PrimaryIcon);
+    fill: var(--btn-DarkColor);
 }
 
 .sColor .bg {
-    fill: var(--btn-SecondaryBg)
+    fill: var(--btn-DarkColor)
 }
 
 .sColor .icon {
-    fill: var(--bg-color);
+    fill: var(--btn-Lightcolor);
 }
 
 .hide {
@@ -93,12 +91,11 @@ button {
     visibility: hidden;
 }
 
-/*color before press the btn
-btn bg = #E1E1E6
-btn icon = #323238
-
-color after press the bnt
-btn bg = #02799D
-btn icon = white
-
-hsl(0, 100%, 45%)*/
+@media( max-width: 500px) {
+    main {
+        display:  flex;
+        flex-direction: column;
+        gap: 10rem;
+        padding: 20rem;
+    }
+}
