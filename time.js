@@ -8,8 +8,6 @@ export function Time({
     buttons
 }) {
     let timeFreeze
-    let minutes = minutesDisplay.textContent
-    let seconds = secondsDisplay.textContent
 
     function TimeDisplaySet(minutes, seconds) {
         minutesDisplay.textContent = String(minutes).padStart(2, '0') 
@@ -51,29 +49,32 @@ export function Time({
     }
     
     function TimeUp() {
-        TimeDisplaySet(String(++(minutes)), seconds)
-        TimeDisplaySet(String(++(minutes)), seconds)
-        TimeDisplaySet(String(++(minutes)), seconds)
-        TimeDisplaySet(String(++(minutes)), seconds)
-        TimeDisplaySet(String(++(minutes)), seconds)
+        let minutes = Number(minutesDisplay.textContent)
+        let seconds = Number(secondsDisplay.textContent)
+        
+        TimeDisplaySet((minutes + 5), seconds)
     }
     
     function TimeDown() {
-        if(minutes <= 0 && seconds <=0) {
+        let minutes = Number(minutesDisplay.textContent)
+        let seconds = Number(secondsDisplay.textContent)
+        
+        let minimumTime = (minutes > 0) || (minutes == 5 && seconds > 0);
+        
+        if(minimumTime) {
+            TimeDisplaySet((minutes - 5), seconds);
+        }
+        if (minutes <= 0 && seconds <= 0) {
             return
         }
-        TimeDisplaySet(String(--minutes), seconds)
-        TimeDisplaySet(String(--minutes), seconds)
-        TimeDisplaySet(String(--minutes), seconds)
-        TimeDisplaySet(String(--minutes), seconds)
-        TimeDisplaySet(String(--minutes), seconds)
     }
 
     function Select() {
         let minutes = prompt("Selecione o tempo")
+
         minutesDisplay.textContent = String(minutes).padStart(2, '0')
-        if(!minutes) {
-            Reset
+        if(!Number(minutes)) {
+            Reset()
         }
     }
 
