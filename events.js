@@ -53,16 +53,19 @@ export function Events({
     btnRain.addEventListener('click', ()=>{
         buttons.RainColorChange()
         sounds.Click()
+        sounds.btnRain.play()
     })
     
     btnCoffee.addEventListener('click', ()=>{
         buttons.CoffeeColorChange()
         sounds.Click()
+        sounds.btnCoffee.play()
     })
     
     btnFire.addEventListener('click', ()=>{
         buttons.FireColorChange()
         sounds.Click()
+        sounds.btnFire.play()
     })
 
     minutesDisplay.addEventListener('click', ()=>{
