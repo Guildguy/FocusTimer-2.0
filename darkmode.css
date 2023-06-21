@@ -1,0 +1,40 @@
+:root {
+    --btn-PrimaryBg: #576468;   
+    --btn-SecondaryBg: #4a2222;
+    --btn-PrimaryIcon:  #323238;
+    --bg-color: hsl(0, 100%, 45%);
+}
+
+body { 
+    max-height: 200px;
+    background-color: #323238;  
+}
+
+.timer {
+    color: hsl(0, 100%, 45%);
+}
+
+.bg {
+    fill: var(--btn-PrimaryBg);
+}
+
+.icon {
+    fill: var(--btn-PrimaryIcon);
+}
+
+.sColor .bg {
+    fill: var(--btn-SecondaryBg)
+}
+
+.sColor .icon {
+    fill: var(--bg-color);
+}
+
+.moon {
+    position: absolute;
+
+    top: 35px;
+    right: 35px;
+
+    cursor: pointer;
+}
